@@ -6,15 +6,15 @@
 
 &emsp;Synthetic images are easy to collect and annotate, yet the semantic segmentation model naively trained on synthetic data may not generalize well to real images. In this work, we introduce a conditional GAN model to close the gap between the representations of synthetic images to those of real images, thus improve the segmentation performance without laborious annotations on real image data.
 
-![](D:\AI论文\GAN\[√]Conditional Generative Adversarial Network for Structured Domain Adaptation\1.png)
+![](https://github.com/heiretodemon/GAN/blob/master/Conditional%20Generative%20Adversarial%20Network%20for%20Structured%20Domain%20Adaptation/1.png)
 
-![](D:\AI论文\GAN\[√]Conditional Generative Adversarial Network for Structured Domain Adaptation/3.png)
+![](https://github.com/heiretodemon/GAN/blob/master/Conditional%20Generative%20Adversarial%20Network%20for%20Structured%20Domain%20Adaptation/3.png)
 
 ## Method
 
 ###  Structure
 
-![](D:\AI论文\GAN\[√]Conditional Generative Adversarial Network for Structured Domain Adaptation\2.png)
+![](https://github.com/heiretodemon/GAN/blob/master/Conditional%20Generative%20Adversarial%20Network%20for%20Structured%20Domain%20Adaptation/2.png)
 
 - source domain -->labeled
 
@@ -48,8 +48,8 @@
 
 ### Performance 
 
-![](D:\AI论文\GAN\[√]Conditional Generative Adversarial Network for Structured Domain Adaptation/4.png)
+![](https://github.com/heiretodemon/GAN/blob/master/Conditional%20Generative%20Adversarial%20Network%20for%20Structured%20Domain%20Adaptation/4.png)
 
 ### Results
 
-![](D:\AI论文\GAN\[√]Conditional Generative Adversarial Network for Structured Domain Adaptation/5.png)
+![](https://github.com/heiretodemon/GAN/blob/master/Conditional%20Generative%20Adversarial%20Network%20for%20Structured%20Domain%20Adaptation/5.png)
