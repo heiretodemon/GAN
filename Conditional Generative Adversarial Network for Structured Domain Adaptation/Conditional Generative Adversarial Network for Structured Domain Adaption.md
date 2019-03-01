@@ -2,6 +2,8 @@
 
 # Conditional Generative Adversarial Network for Structured Domain Adaption
 
+[paper link](http://openaccess.thecvf.com/content_cvpr_2018/html/Hong_Conditional_Generative_Adversarial_CVPR_2018_paper.html)
+
 ## Abstract 
 
 &emsp;Synthetic images are easy to collect and annotate, yet the semantic segmentation model naively trained on synthetic data may not generalize well to real images. In this work, we introduce a conditional GAN model to close the gap between the representations of synthetic images to those of real images, thus improve the segmentation performance without laborious annotations on real image data.
