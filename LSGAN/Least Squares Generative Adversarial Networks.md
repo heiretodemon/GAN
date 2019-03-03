@@ -17,7 +17,7 @@ May lead to the vanishing gradients problem during the learning process.
 
 ## Idea
 ### Quality
-![](D:\AI论文\GAN\LSGAN\1.png)
+![](https://github.com/heiretodemon/GAN/blob/master/LSGAN/1.png)
 
 ```latex
 The idea is simple yet powerful:the least squares loss function is able to move the fake samples toward the decision boundary, because the least squares loss function penalizes samples that lie in a long way on the correct side of the decision boundary. As figure shows, the least squares loss function will penalize the fake samples and pull them toward the decision boundary even though they are correctly classified.
@@ -51,12 +51,12 @@ The idea is simple yet powerful:the least squares loss function is able to move 
 
 &emsp; Then we can reformulate $V_{LSGAN}​$ ：
 
-![](D:\AI论文\GAN\LSGAN\2.png)
+![](https://github.com/heiretodemon/GAN/blob/master/LSGAN/2.png)
 
 &emsp; Setting $a=-1,b=1, c=0$ is OK, and $a=0, c=b=-1$ also show similar performance
 
 ### Model architecture
 
-![](D:\AI论文\GAN\LSGAN\3.png)
+![](https://github.com/heiretodemon/GAN/blob/master/LSGAN/3.png)
 
 Motivated by the VGG model and DCGAN.
