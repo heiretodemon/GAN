@@ -4,7 +4,7 @@
 
 [paper link](http://openaccess.thecvf.com/content_cvpr_2017/html/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.html)
 
-![](D:\AI论文\GAN\Image-to-Image Translation with Conditional Adversarial Networks\1.png)
+![](https://github.com/heiretodemon/GAN/blob/master/Image-to-Image%20Translation%20with%20Conditional%20Adversarial%20Networks/1.png/1.png)
 
 ## Abstract 
 
