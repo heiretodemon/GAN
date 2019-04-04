@@ -53,4 +53,5 @@ where $x$ is a 3D shape from the training set, $y$ is its corresponding 2D image
 
 # Evaluation
 
-![1554370960567](C:\Users\Wolf\AppData\Roaming\Typora\typora-user-images\1554370960567.png)
+![1](https://github.com/heiretodemon/GAN/blob/master/3D-GAN/1.png)
+![2](https://github.com/heiretodemon/GAN/blob/master/3D-GAN/2.png)
