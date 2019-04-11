@@ -21,9 +21,9 @@
 
 - To solve mode collapse and improve the quality and diversity of the results, we use the Wasserstein distance of WAGN-GP, so the loss function is:
 
-$$
+$
 \mathcal{L}_{\text { shape }}=\mathbb{E}_{\mathbf{v}}\left[D_{\text { shape }}(\mathbf{v})\right]-\mathbb{E}_{\mathbf{z}_{\text { stape }}}\left[D_{\text { shape }}\left(G_{\text { shape }}\left(\mathbf{z}_{\text { shape }}\right)\right]\right.
-$$
+$
 
 - To enforce the Lipschitz constraint in Wasserstein GANs , we add a gradientpenalty loss $$\lambda_{\mathrm{GP}} \mathbb{E}_{\tilde{\mathbf{v}}}\left[\left(\nabla_{\tilde{\mathbf{v}}} D_{\text { shape }}(\tilde{\mathbf{v}})-1\right)^{2}\right]$$ to $\mathcal{L}_{\text { shape }}$, where $\tilde{\mathbf{V}}$ is a randomly sampled point along the straight line between a real shape and a generated shape, and $\lambda_{\mathrm{GP}}$ controls the capacity of $D_{\text { shape }}$. 
 
