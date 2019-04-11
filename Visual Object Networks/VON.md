@@ -11,7 +11,7 @@
 
 ## Method
 
-![](D:\AI论文\GAN\Visual Object Networks\1.png)
+![](https://github.com/heiretodemon/GAN/tree/master/Visual%20Object%20Networks\1.png)
 
 ### Learning 3D shape Priors
 
@@ -98,8 +98,8 @@ $$
 
 ## Experiment
 
-![](D:\AI论文\GAN\Visual Object Networks\2.png)
+![](https://github.com/heiretodemon/GAN/tree/master/Visual%20Object%20Networks\2.png)
 
-![](D:\AI论文\GAN\Visual Object Networks\3.png)
+![](https://github.com/heiretodemon/GAN/tree/master/Visual%20Object%20Networks\3.png)
 
-![](D:\AI论文\GAN\Visual Object Networks\4.png)
+![](https://github.com/heiretodemon/GAN/tree/master/Visual%20Object%20Networks\4.png)
