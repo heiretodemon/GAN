@@ -20,6 +20,7 @@
 - Both $G$ and $D$ contain fully volumetric convolutional  and deconvolutional layers.
 
 - To solve mode collapse and improve the quality and diversity of the results, we use the Wasserstein distance of WAGN-GP, so the loss function is:
+
 $$
 \mathcal{L}_{\text { shape }}=\mathbb{E}_{\mathbf{v}}\left[D_{\text { shape }}(\mathbf{v})\right]-\mathbb{E}_{\mathbf{z}_{\text { stape }}}\left[D_{\text { shape }}\left(G_{\text { shape }}\left(\mathbf{z}_{\text { shape }}\right)\right]\right.
 $$
@@ -66,6 +67,7 @@ Process:
 &emsp; To synthesize realistic 2D images  given projected 2.5D sketches that encode both the viewpoint and the object shape. so the 2D images $\mathbf{x}=G_{\text { texture }}\left(\mathbf{v}_{2.5 \mathrm{D}}, \mathbf{Z}_{\text { texture }}\right)​$.  This network needs to model both object texture and environment illumination, and this mapping problem can be cast as an unpaired image-to-image translation problem, so CycleGAN is our baseline.
 
 &emsp; So the loss functions are:
+
 $$
 The\space adversarial\space loss\space on\space image: \mathcal{L}_{\text { image }}^{\text { GAN }}=\mathbb{E}_{\mathbf{x}}\left[\log D_{\text { image }}(\mathbf{x})\right]+\mathbb{E}_{\left(\mathbf{v}_{25 \mathbf{D}}, \mathbf{z}_{\text { texure }}\right)}\left[\log \left(1-D_{\text { image }}\left(G_{\text { texture }}\left(\mathbf{v}_{2.5 \mathrm{D}}, \mathbf{Z}_{\text { texture }}\right)\right)\right)\right.\\
 The\space same\space loss\space on\space sketches: \mathcal{L}_{2.5 \mathrm{D}}^{\mathrm{GAN}}=\mathbb{E}_{\mathrm{v}_{25 \mathrm{D}}}\left[\log D_{2.5 \mathrm{D}}\left(\mathbf{v}_{2.5 \mathrm{D}}\right)\right]+\mathbb{E}_{\mathrm{x}}\left[\log \left(1-D_{2.5 \mathrm{D}}\left(E_{2.5 \mathrm{D}}(\mathrm{x})\right)\right]\right.\\
@@ -77,14 +79,17 @@ $$
 #### One-to-many mappings
 
 &emsp;We introduce a latent space cycle-consistency loss to encourage $G_{texture}$ to use the texture code $Z_{texture}$: 
+
 $$
 \mathcal{L}_{\text { texture }}^{\mathrm{cyc}}=\lambda_{\text { texture }}^{\mathrm{cyc}} \mathbb{E}_{\left(\mathbf{v}_{2.5 \mathrm{D}}, \mathbf{z}_{\text { texture }}\right)}\left[ \| E_{\text { texture }}\left(G_{\text { texture }}\left(\mathbf{v}_{2.5 \mathrm{D}}, \mathbf{Z}_{\text { texture }}\right)\right)-\mathbf{Z} \text { texture }\left\|_{1}\right]\right.
 $$
 &emsp;Finally, to allow sampling at test time, we add a Kullback–Leibler (KL) loss on the $z$ space to force $E_{texture(x)}​$ to be close to a Gaussian distribution: 
+
 $$
 \mathcal{L}_{\mathrm{KL}}=\lambda_{\mathrm{KL}} \mathbb{E}_{\mathbf{x}}\left[\mathcal{D}_{\mathrm{KL}}\left(E_{\text { texture }}(\mathbf{x}) \| \mathcal{N}(0, I)\right)\right]
 $$
 So the final texture loss is :
+
 $$
 \mathcal{L}_{\text { texture }}=\underbrace{\mathcal{L}_{\text { image }}^{\text { GAN }}+\mathcal{L}_{2.5 \mathrm{D}}^{\text { cyc }}}+\underbrace{\mathcal{L}_{2.5 \mathrm{D}}^{\text { cyc }}+\mathcal{L}_{\text { texture }}^{\text { cyc }}+\mathcal{L}_{\text { texture }}}_{\text { Cycle-consistency losses }}+\underbrace{\mathcal{L}_{\mathrm{KL}}}_{\text { KL loss }}
 $$
@@ -92,6 +97,7 @@ $$
 ### Full model
 
 &emsp; Our full objective is:
+
 $$
 argmin_{(G_{shape}, G_{texture}, E_{2.5D},E_{texture})} argmax_{(D_{shape}, D_{texture}, D_{2.5D})} \lambda \mathcal{L}_{shape} + \mathcal{L}_{texture}
 $$
